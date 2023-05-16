@@ -31,6 +31,9 @@ def concat_multiple_documents(list_of_dataframes):
 
 
 def preprocess(data):
+    
+    """ Remove punctuation and stopwords """
+   
     data["row"] = data["row"].apply(remove_punctuation)
     data["row"] = data["row"].apply(remove_stopwords_spacy)
     return data
